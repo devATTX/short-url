@@ -1,0 +1,28 @@
+<div>
+  <form class="generator-form" [formGroup]="urlForm" (ngSubmit)="onSubmit()">
+    <label>Enter URL: </label>
+    <mat-form-field class="generator-url-input">
+      <input matInput type="text" 
+        formControlName="initialUrl" 
+        placeholder="Ex. https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    </mat-form-field>
+    <div class="example-button-row">
+      <button mat-raised-button type="submit">Submit</button>
+    </div>
+
+    <br />
+    <mat-divider></mat-divider>
+    <br />
+
+    <div>
+      <label>Generated URL: </label>
+      <mat-form-field class="generator-url-input">
+        <input matInput type="text" 
+        placeholder="url/ABCDEF"
+        formControlName="generatedUrl" value="{{generatedUrl}}">
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+
+
